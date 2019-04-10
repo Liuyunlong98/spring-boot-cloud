@@ -1,7 +1,6 @@
 server:
   port: 8080
 
-name: zhangxd
 
 eureka:
   instance:
