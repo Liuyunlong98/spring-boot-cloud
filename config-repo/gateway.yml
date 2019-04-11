@@ -40,8 +40,3 @@ zuul:
     svcb-service:
       path: /svcb/**
       sensitiveHeaders:
-      
-  security:
-  user:
-    name: admin
-    password: ${MONITOR_SERVER_PASSWORD:admin}
