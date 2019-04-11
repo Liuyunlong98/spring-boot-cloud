@@ -6,7 +6,7 @@ msg: Hello,我是服务b2
 eureka:
   instance:
     # 配置使用指定IP
-    ip-address:  47.107.229.255
+    ip-address:  47.92.209.5
     metadata-map:
       user.name: ${security.user.name}
       user.password: ${security.user.password}
