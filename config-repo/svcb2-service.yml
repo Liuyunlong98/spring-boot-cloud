@@ -1,1 +1,24 @@
+server:
+  port: 8071
+  
+msg: Hello,我是服务b2
 
+eureka:
+  instance:
+    # 配置使用指定IP
+    ip-address:  47.107.229.255
+    metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
+
+security:
+  user:
+    name: user
+    password: password
+  oauth2:
+    client:
+      clientId: svcb-service
+      clientSecret: ${security.user.password}
+      accessTokenUri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/oauth/token
+      grant-type: client_credentials
+      scope: server
