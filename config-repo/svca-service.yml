@@ -4,6 +4,8 @@ server:
 
 eureka:
   instance:
+    # 配置使用指定IP
+    ip-address:  47.244.111.28
     metadata-map:
       user.name: ${security.user.name}
       user.password: ${security.user.password}
