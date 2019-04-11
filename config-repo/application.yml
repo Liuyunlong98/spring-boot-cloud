@@ -2,6 +2,7 @@ eureka:
   instance:
     hostname: registry
     prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
     register-with-eureka: false
     fetch-registry: false
