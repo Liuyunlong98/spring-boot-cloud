@@ -10,7 +10,8 @@ management:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id:120.24.14.212:${server.port}
+     # 配置使用指定IP
+    ip-address:  120.24.14.212
     health-check-url-path: ${server.context-path}${management.context-path}/health
     status-page-url-path: ${server.context-path}${management.context-path}/info
     metadata-map:
