@@ -1,12 +1,44 @@
-server:  
-  port: 8761  
-eureka:  
-  instance:  
-    hostname: registry  
-  client:  
-    # 表示是否注册自身到eureka服务器  
-    # register-with-eureka: false  
-    # 是否从eureka上获取注册信息  
-    # fetch-registry: false  
-    service-url:  
-      defaultZone: http://registry2:8762/eureka/  
+eureka:
+  instance:
+    hostname: registry
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry2:8762/eureka/
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+spring:
+ rabbitmq:  
+    host: 47.107.229.255
+    port: 5672
+    username: root
+    password: root
+    
+ sleuth:
+    sampler:
+      percentage: 1
+    integration:
+      enabled: false
+    scheduled:
+      skip-pattern: "^org.*HystrixStreamTask$"
+
+authserver:
+    hostname: auth-service
+    port: 5000
+    contextPath: /uaa
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/current
