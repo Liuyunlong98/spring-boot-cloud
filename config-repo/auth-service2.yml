@@ -1,1 +1,26 @@
 
+server:
+  context-path: /uaa
+  port: 5002
+
+management:
+  security:
+    enabled: false
+  context-path: /mgmt
+
+eureka:
+  instance:
+    prefer-ip-address: true
+     # 配置使用指定IP
+    ip-address:  39.108.172.226
+    health-check-url-path: ${server.context-path}${management.context-path}/health
+    status-page-url-path: ${server.context-path}${management.context-path}/info
+    metadata-map:
+      management.context-path: ${server.context-path}${management.context-path}
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:user
+    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
