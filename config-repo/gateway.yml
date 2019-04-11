@@ -1,6 +1,15 @@
 server:
   port: 8060
 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone:http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
+  instance:
+    ip-address: true
+    
 management:
   security:
     enabled: false
@@ -12,6 +21,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 20000
+    
 
 ribbon:
   ReadTimeout: 10000
@@ -30,3 +40,8 @@ zuul:
     svcb-service:
       path: /svcb/**
       sensitiveHeaders:
+      
+  security:
+  user:
+    name: admin
+    password: ${MONITOR_SERVER_PASSWORD:admin}
