@@ -17,7 +17,7 @@ eureka:
       user.password: ${security.user.password}
   client:
     service-url:
-      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
+      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/,http://user:${REGISTRY_SERVER_PASSWORD:password}@registry2:8762/eureka/
 
 hystrix:
   command:
