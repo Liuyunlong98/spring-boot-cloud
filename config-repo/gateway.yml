@@ -46,5 +46,6 @@ zuul:
       path: /svcb/**
       sensitiveHeaders:
     svcb2-service:
-      path: /svcb/**
-      sensitiveHeaders:
+      ribbon:
+      listOfServices:http://47.107.229.255:8070,http://47.107.229.255:8071
+     
