@@ -9,7 +9,7 @@ management:
 
 eureka:
   instance:
-   prefer-ip-address: true
+    prefer-ip-address: true
     health-check-url-path: ${server.context-path}${management.context-path}/health
     status-page-url-path: ${server.context-path}${management.context-path}/info
     metadata-map:
