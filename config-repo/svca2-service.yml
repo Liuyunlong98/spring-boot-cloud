@@ -1,6 +1,6 @@
 
 server:
-  port: 8073
+  port: 8074
 
 
 eureka:
