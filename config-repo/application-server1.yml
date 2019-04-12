@@ -22,8 +22,8 @@ spring:
  rabbitmq:  
     host: 47.107.229.255
     port: 5672
-    username: admin
-    password: liuyunlong
+    username: root
+    password: root
  sleuth:
     sampler:
       percentage: 1
