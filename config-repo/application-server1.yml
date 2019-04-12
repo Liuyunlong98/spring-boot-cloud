@@ -24,6 +24,7 @@ spring:
     port: 5672
     username: root
     password: root
+    
  sleuth:
     sampler:
       percentage: 1
