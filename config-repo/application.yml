@@ -20,7 +20,7 @@ ribbon:
 
 spring:
  rabbitmq:  
-    host: 47.106.242.175
+    host: 47.107.229.255
     port: 5672
     username: guest
     password: guest
