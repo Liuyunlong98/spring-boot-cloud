@@ -17,10 +17,6 @@ rabbitmq:
     port: 5672
     username: admin
     password: liuyunlong
-eureka:
-  client:
-    service-url:
-      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
 
 # 允许/actuator/bus-refresh接口被外部调用
 management:  
