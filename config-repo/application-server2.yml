@@ -23,7 +23,8 @@ spring:
     host: 47.107.229.255
     port: 5672
     username: root
-    password: root 
+    password: root
+    
  sleuth:
     sampler:
       percentage: 1
