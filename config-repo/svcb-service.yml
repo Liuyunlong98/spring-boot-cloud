@@ -11,19 +11,6 @@ eureka:
       user.name: ${security.user.name}
       user.password: ${security.user.password}
       
-  # 配置rabbitmq的地址以及用户密码
-rabbitmq:  
-    host: 47.107.229.255
-    port: 5672
-    username: admin
-    password: liuyunlong
-
-# 允许/actuator/bus-refresh接口被外部调用
-management:  
-  endpoints:
-    web:
-      exposure:
-        include: "*"
 
 security:
   user:
