@@ -20,7 +20,7 @@ ribbon:
 
 spring:
  rabbitmq:  
-    host: 47.107.229.255
+    host: 47.107.229.255 #如果项目中有配置,优先读取项目中的配置
     port: 5672
     username: admin
     password: liuyunlong
