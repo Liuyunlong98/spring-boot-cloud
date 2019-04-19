@@ -12,7 +12,7 @@ eureka:
   instance:
     prefer-ip-address: true
      # 配置使用指定IP
-    ip-address:  39.108.172.226
+    ip-address:  47.92.209.5
     health-check-url-path: ${server.context-path}${management.context-path}/health
     status-page-url-path: ${server.context-path}${management.context-path}/info
     metadata-map:
