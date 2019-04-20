@@ -18,7 +18,7 @@ eureka:
     metadata-map:
       management.context-path: ${server.context-path}${management.context-path}
 
- spring:
+spring:
   redis:
     host: 47.107.229.255
     database: 0
