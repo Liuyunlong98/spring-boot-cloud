@@ -6,6 +6,7 @@ management:
   security:
     enabled: false
   context-path: /mgmt
+  
 
 eureka:
   instance:
@@ -16,3 +17,9 @@ eureka:
     status-page-url-path: ${server.context-path}${management.context-path}/info
     metadata-map:
       management.context-path: ${server.context-path}${management.context-path}
+
+redis:
+    host: 47.107.229.255
+    database: 0
+    port: 6379
+    password: 123456
